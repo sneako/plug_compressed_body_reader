@@ -12,8 +12,7 @@ intended users.
 
 You can read more about these payloads and find some examples [here](https://bomb.codes/).
 
-Currently only supports GZIP, but according to the included benchmarks, you can safely decompress
-GZIP'd data with little to no performance hit!
+Currently only supports GZIP.
 <!-- MDOC !-->
 
 ## Installation
