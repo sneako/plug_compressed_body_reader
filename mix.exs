@@ -36,8 +36,7 @@ defmodule PlugCompressedBodyReader.MixProject do
   def package do
     [
       licenses: ["MIT"],
-      links: %{"GitHub" => @repo_url},
-      exclude_patterns: ["priv/bomb/*"]
+      links: %{"GitHub" => @repo_url}
     ]
   end
 

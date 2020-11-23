@@ -9,7 +9,7 @@ defmodule PlugCompressedBodyReader.GzipTest do
   end
 
   test "returns error when it encounters a bomb" do
-    bomb_path = Application.app_dir(:plug_compressed_body_reader, ["priv", "bomb", "10GB.gz"])
+    bomb_path = Path.expand("../fixtures/10GB.gz", __DIR__)
     bomb = File.read!(bomb_path)
     assert {:error, "max chunks reached"} = Gzip.decompress(bomb)
   end
