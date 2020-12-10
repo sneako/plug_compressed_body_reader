@@ -13,6 +13,14 @@ intended users.
 You can read more about these payloads and find some examples [here](https://bomb.codes/).
 
 Currently only supports GZIP.
+
+To use it in a Phoenix project, configure the `:body_reader` option for `Plug.Parsers` in your `endpoint.ex`:
+
+```
+  plug Plug.Parsers,
+    body_reader: {PlugCompressedBodyReader, :read_body, [[max_chunks: 8]]},
+    ...
+```
 <!-- MDOC !-->
 
 ## Installation
